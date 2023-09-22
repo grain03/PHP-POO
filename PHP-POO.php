@@ -3,7 +3,7 @@ class Car {
   public $brand;
   public $model;
 
-  function set_brand($model){
+  function set_model($model){
     $this->model = $model;
   }
 
@@ -14,7 +14,7 @@ class Car {
 
 
 $Volkswagen  = new Car();
-$Volkswagen ->set_model("Passat");
+$Volkswagen->set_model("Passat");
 
 
 echo $Volkswagen->get_model();
