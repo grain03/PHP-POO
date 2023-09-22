@@ -2,31 +2,31 @@
 <html>
 <body>
 <?php
+
 class Car {
   public $brand;
   public $model;
   public $price;
 
-  function __construct($model, $price){
+  function __construct($brand, $model, $price){
+    $this->brand = $brand;
     $this->model = $model;
     $this->price = $price;
   }
 
-  function get_model(){
-    return $this->model;
-  }  
-  
-  function get_price(){
-    return $this->price;
+  function __destruct(){
+    echo $this->brand . " " .$this->model . " Costs " . $this->price . " And " ;
+ 
   }
 }
 
 
-$Volkswagen  = new Car("Passat", "7399$");
-$Peugeot  = new Car("5008", "5500$");
+$Volkswagen  = new Car("Volkswagen", "Passat", "7399$");
+$Peugeot  = new Car("Peugeot","5008", "5500$");
+$Opel  = new Car("Opel","Astra", "2500$");
 
 
-echo $Volkswagen->get_model() . " Costs " . $Volkswagen->get_price() . " And " .  $Peugeot->get_model() . " Costs " . $Peugeot->get_price();
 ?>
+
 </body>
 </html>
