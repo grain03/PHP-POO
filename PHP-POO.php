@@ -6,7 +6,7 @@
 class Car {
   public $brand;
   public $model;
-  public $price;
+  protected $price;
 
   function __construct($brand, $model, $price){
     $this->brand = $brand;
@@ -16,7 +16,6 @@ class Car {
 
   function __destruct(){
     echo $this->brand . " " .$this->model . " Costs " . $this->price . " And " ;
- 
   }
 }
 
@@ -24,7 +23,6 @@ class Car {
 $Volkswagen  = new Car("Volkswagen", "Passat", "7399$");
 $Peugeot  = new Car("Peugeot","5008", "5500$");
 $Opel  = new Car("Opel","Astra", "2500$");
-
 
 ?>
 
